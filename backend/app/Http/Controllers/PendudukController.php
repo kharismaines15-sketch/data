@@ -11,7 +11,7 @@ class PendudukController extends Controller
     public function index(Request $request)
 {
     $query = Penduduk::orderBy('created_at', 'desc');
-
+    /* ada perubahan di codingan */
     if ($request->search) {
         $query->where('nama', 'like', '%' . $request->search . '%')
               ->orWhere('nik', 'like', '%' . $request->search . '%');
